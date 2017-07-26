@@ -1,0 +1,1 @@
+$query = "UPDATE `user` SET `first_name`='$first_name',`surname`='$surname',`email`='$email',`password`='$password',`contact_no`='$contact_no',`city`='$city',`area`='$area',`gender`='$gender' WHERE `user`.`email`='$email'";
