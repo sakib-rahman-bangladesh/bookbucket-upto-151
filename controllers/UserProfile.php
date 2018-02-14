@@ -70,6 +70,12 @@
 			.purpose_price {
 				font-weight: bold;
 			}
+
+			.post_img{
+				width: 7cm;
+				height: 5cm;
+				background-color: #e9ebee;
+			}
     </style>
     <style type="text/css">
       /*
@@ -143,8 +149,9 @@
 					<hr>
 					<p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>
 					<p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>
+					<div class="post_img"></div>
 				</div>
-				<div class=""></div>
+
 				<div class=""></div>
 			</div
 			<hr>
