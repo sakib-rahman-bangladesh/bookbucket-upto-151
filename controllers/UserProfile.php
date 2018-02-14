@@ -35,8 +35,7 @@
       }
 
       .light_blue {
-        /* background-color: #099DD9; */
-				background-color: #4266b3;
+        background-color: #099DD9;
       }
 
       .green {
@@ -52,9 +51,8 @@
         background-color: rgb(77, 190, 161);
       }
 
-      .red {
-        //background-color: #EC1D3B;
-				background-color: #ffffff;
+      .timeline_block {
+
       }
 
       .orange {
@@ -63,6 +61,9 @@
       }
 			.no_underline {
 				text-decoration: none;
+			}
+			.post {
+				background-color: #fff;
 			}
     </style>
     <style type="text/css">
@@ -87,19 +88,16 @@
 				.dark_blue {
           width: 50%;
 				}
-        .light_blue{
-          width: 50%;
-        }
 
 				.dark_blue, .light_blue{
 					height: 1cm;
 				}
 
-				.green{
+				.leftside_menu{
           width: 25%;
 					height: 5cm;
         }
-        .red{
+        .timeline_block{
           width: 75%;
 					height: 10cm;
         }
@@ -127,14 +125,17 @@
       <div class="dark_blue">
 				<div class="search_box">Search box</div>
 			</div>
-      <div class="light_blue">
+      <div class="dark_blue">
 				<div class="nav_options">Navigation Options</div>
 			</div>
-      <div class="green">
+      <div class="leftside_menu">
 				Side menu
 			</div>
-      <div class="red">
+      <div class="timeline_block">
 				Rent, sell, buy Post
+				<div class="post">sdfja;slj</div>
+				<div class=""></div>
+				<div class=""></div>
 			</div
 			<hr>
       <div class="orange">
