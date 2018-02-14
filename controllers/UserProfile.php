@@ -16,8 +16,7 @@
 
       body {
         font-family: 'Roboto', sans-serif;
-				// background-color: #e9ebee;
-				background-color: #FFF;
+				background-color: #e9ebee;
       }
 
       .title {
@@ -31,17 +30,18 @@
 
       .dark_blue {
         //background-color: #2A457A;
-				background-color: #3b5898;
+				background-color: #4266b3;
         color: #efefef;
       }
 
       .light_blue {
-        background-color: #099DD9;
+        /* background-color: #099DD9; */
+				background-color: #4266b3;
       }
 
       .green {
         //background-color: #0C8542;
-				background-color: #c1c1c1;
+				background-color: #f6f7f9;
       }
 
       .lime {
@@ -54,13 +54,16 @@
 
       .red {
         //background-color: #EC1D3B;
-				background-color: #e9ebee;
+				background-color: #ffffff;
       }
 
       .orange {
         //background-color: #F79420;
 				//background-color: #e9ebee;
       }
+			.no_underline {
+				text-decoration: none;
+			}
     </style>
     <style type="text/css">
       /*
@@ -132,10 +135,11 @@
 			</div>
       <div class="red">
 				Rent, sell, buy Post
-			</div>
+			</div
+			<hr>
       <div class="orange">
-				<div style="text-align: left; float:left; padding:10px;"><b><a href="#">Advertising</a> | <a href="#">Business</a></b></div>
-				<div style="text-align: right; padding:10px;"><b><a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Settings</a></b></div>
+				<div style="text-align: left; float:left; padding:10px;"><a class="no_underline" href="#">Advertising</a> <a class="no_underline" href="#">Business</a></div>
+				<div style="text-align: right; padding:10px;"><a class="no_underline" href="#">Privacy</a> <a class="no_underline" href="#">Terms</a> <a class="no_underline" href="#">Settings</a></div>
 				<div align="center" style="padding-bottom:20px;"><span>Playlagom © 2018<span></div>
 			</div>
     </div>
