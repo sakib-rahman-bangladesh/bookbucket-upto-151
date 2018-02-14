@@ -59,6 +59,9 @@
 			}
 			.post {
 				background-color: #fff;
+				margin-top: 2px;
+				margin-right: 20px;
+				margin-left: 20px;
 				padding: 20px;
 			}
 
@@ -142,18 +145,28 @@
 				Side menu
 			</div>
       <div class="timeline">
-				<div align="center" style="padding:20px;">Rent, Sell, Buy posts</div>
+				<div style="padding:20px;">
+					Timeline view:
+					<input type="radio" name="gender" value="male"> All
+					<input type="radio" name="gender" value="female"> Rent
+					<input type="radio" name="gender" value="other"> Buy
+					<input type="radio" name="gender" value="other"> Sell
+				</div>
+				<div class="post">
+					<p style="width:100px;font-weight:bold;">Make post</p>
+					<textarea rows="4" cols="50" placeholder="Describe your book..."></textarea>
+					<div style="background-color: #f6f7f9; border-radius: 25px; padding: 10px; width:100px;font-weight:bold;">Upload image</div>
+				</div>
+				<br>
 				<div class="post">
 					<p>User commented on this.</p>
 					<hr>
 					<p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>
 					<p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>
 					<div class="post_img"></div>
+					<hr>
 				</div>
-
-				<div class=""></div>
-			</div
-			<hr>
+			</div>
       <div class="bottom">
 				<div style="text-align: left; float:left; padding:10px;"><a class="no_underline" href="#">Advertising</a> <a class="no_underline" href="#">Business</a></div>
 				<div style="text-align: right; padding:10px;"><a class="no_underline" href="#">Privacy</a> <a class="no_underline" href="#">Terms</a> <a class="no_underline" href="#">Settings</a></div>
