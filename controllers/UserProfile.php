@@ -28,8 +28,7 @@
         min-height: 150px;
       }
 
-      .dark_blue {
-        //background-color: #2A457A;
+      .header {
 				background-color: #4266b3;
         color: #efefef;
       }
@@ -51,10 +50,6 @@
         background-color: rgb(77, 190, 161);
       }
 
-      .timeline_block {
-
-      }
-
       .orange {
         //background-color: #F79420;
 				//background-color: #e9ebee;
@@ -64,6 +59,16 @@
 			}
 			.post {
 				background-color: #fff;
+				padding: 20px;
+			}
+
+			.time_location{
+				font-size: 12px;
+				font-weight: normal;
+			}
+
+			.purpose_price {
+				font-weight: bold;
 			}
     </style>
     <style type="text/css">
@@ -85,11 +90,11 @@
         }
       }
       @media screen and (min-width: 550px) {
-				.dark_blue {
+				.header {
           width: 50%;
 				}
 
-				.dark_blue, .light_blue{
+				.header, .light_blue{
 					height: 1cm;
 				}
 
@@ -101,7 +106,7 @@
           width: 75%;
 					height: 10cm;
         }
-        .orange{
+        .bottom{
           width: 100%;
 					height: 2cm;
         }
@@ -122,10 +127,10 @@
 		</div>
 
     <div class="container">
-      <div class="dark_blue">
+      <div class="header">
 				<div class="search_box">Search box</div>
 			</div>
-      <div class="dark_blue">
+      <div class="header">
 				<div class="nav_options">Navigation Options</div>
 			</div>
       <div class="leftside_menu green">
@@ -133,12 +138,17 @@
 			</div>
       <div class="timeline">
 				<div align="center" style="padding:20px;">Rent, Sell, Buy posts</div>
-				<div class="post">sdfja;slj</div>
+				<div class="post">
+					<p>User commented on this.</p>
+					<hr>
+					<p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>
+					<p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>
+				</div>
 				<div class=""></div>
 				<div class=""></div>
 			</div
 			<hr>
-      <div class="orange">
+      <div class="bottom">
 				<div style="text-align: left; float:left; padding:10px;"><a class="no_underline" href="#">Advertising</a> <a class="no_underline" href="#">Business</a></div>
 				<div style="text-align: right; padding:10px;"><a class="no_underline" href="#">Privacy</a> <a class="no_underline" href="#">Terms</a> <a class="no_underline" href="#">Settings</a></div>
 				<div align="center" style="padding-bottom:20px;"><span>Playlagom © 2018<span></div>
