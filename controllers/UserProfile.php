@@ -103,8 +103,9 @@
           width: 50%;
 				}
 
-				.header, .light_blue{
-					height: 1cm;
+				.header{
+					padding-top: 10px;
+					padding-bottom: 10px;
 				}
 
 				.leftside_menu{
@@ -139,7 +140,7 @@
 				<div class="search_box">Search box</div>
 			</div>
       <div class="header">
-				<div class="nav_options">Navigation Options</div>
+				<span>Home</span> | <span>Logout</span>
 			</div>
       <div class="leftside_menu green">
 				Side menu
@@ -159,8 +160,6 @@
 				</div>
 				<br>
 				<div class="post">
-					<p>User commented on this.</p>
-					<hr>
 					<p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>
 					<p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>
 					<br>
