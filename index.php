@@ -5,8 +5,8 @@
     <link rel="stylesheet" type="text/css" href="front-end\css\index.css">
     <script src="front-end\js\index.js"></script>
   </head>
-  <body>
 
+  <body>
 		<h1 align = "center">Welcome To <span style="color:#2fb3e0">Bookbucket</span> !!!</h1>
 		<h2 align = "center">A platform where one can <span style="color:#4194ad">BUY</span>, <span style="color:#4194ad">SELL</span> and <span style="color:#4194ad">RENT</span> books.</h2>
 

@@ -50,7 +50,7 @@ git add .
 
 echo 04. Done...Committing a modified version of a file to the repo.
 echo 
-git commit -m "form validation(Basic CRUD): stage 1"
+git commit -m "Push v1.0.0"
 
 
 ############

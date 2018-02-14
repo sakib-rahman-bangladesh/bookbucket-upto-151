@@ -9,7 +9,6 @@ INSERT INTO `location` (`city`, `area`) VALUES ('dhaka', 'aftabnagar');
 INSERT INTO `location` (`city`, `area`) VALUES ('dhaka', 'uttora');
 
 
-
 // table: user_info
 // attributes: `name`, `email`, `password`, `city`, `area`,`contact_no` ,`gender`
 // primary key (email)
@@ -21,8 +20,6 @@ INSERT INTO `user_info` (`name`, `email`, `password`, `city`, `area`, `contact_n
 INSERT INTO `user_info` (`name`, `email`, `password`, `city`, `area`, `contact_no`, `gender`) VALUES ( 'sakib', 'd@gmail.com', '111', 'dhaka', 'merul', '01712345678', 'male');
 
 
-
-
 // table: book_info
 // attributes: `book_name`,`writer` ,`edition`,`category`
 // primary key (book_name, writer, edition)
@@ -32,11 +29,6 @@ INSERT INTO `book_info` (`book_name`, `writer`, `edition`, `category`) VALUES ('
 INSERT INTO `book_info` (`book_name`, `writer`, `edition`, `category`) VALUES ('algorithms', 'cormen', '3rd', 'cse');
 INSERT INTO `book_info` (`book_name`, `writer`, `edition`, `category`) VALUES ('algorithms', 'cormen', '2nd', 'cse');
 INSERT INTO `book_info` (`book_name`, `writer`, `edition`, `category`) VALUES ('algorithms', 'cormen', '1st', 'cse');
-
-
-
-
-
 
 // table: user_activity
 // attributes: `email`, `book_name`, `writer`, `edition`,  `quantity`, `category`, `purpose`, `time`, `city`, `area`
