@@ -110,7 +110,6 @@
         }
         .timeline{
           width: 75%;
-					height: 10cm;
         }
         .bottom{
           width: 100%;
