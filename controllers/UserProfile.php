@@ -163,8 +163,11 @@
 					<hr>
 					<p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>
 					<p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>
+					<br>
+					Book description from user...
 					<div class="post_img"></div>
 					<hr>
+					<p style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:40px;font-weight:bold;">CALL</p>
 				</div>
 			</div>
       <div class="bottom">
