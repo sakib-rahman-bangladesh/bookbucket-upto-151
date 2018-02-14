@@ -97,7 +97,7 @@
           width: 25%;
 					height: 5cm;
         }
-        .timeline_block{
+        .timeline{
           width: 75%;
 					height: 10cm;
         }
@@ -128,11 +128,11 @@
       <div class="dark_blue">
 				<div class="nav_options">Navigation Options</div>
 			</div>
-      <div class="leftside_menu">
+      <div class="leftside_menu green">
 				Side menu
 			</div>
-      <div class="timeline_block">
-				Rent, sell, buy Post
+      <div class="timeline">
+				<div align="center" style="padding:20px;">Rent, Sell, Buy posts</div>
 				<div class="post">sdfja;slj</div>
 				<div class=""></div>
 				<div class=""></div>
