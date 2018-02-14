@@ -30,7 +30,8 @@
       }
 
       .dark_blue {
-        background-color: #2A457A;
+        //background-color: #2A457A;
+				background-color: #3b5898;
         color: #efefef;
       }
 
@@ -39,7 +40,8 @@
       }
 
       .green {
-        background-color: #0C8542;
+        //background-color: #0C8542;
+				background-color: #c1c1c1;
       }
 
       .lime {
@@ -51,7 +53,8 @@
       }
 
       .red {
-        background-color: #EC1D3B;
+        //background-color: #EC1D3B;
+				background-color: #e9ebee;
       }
 
       .orange {
@@ -91,10 +94,11 @@
 
 				.green{
           width: 25%;
-					height: 10cm;
+					height: 5cm;
         }
         .red{
           width: 75%;
+					height: 10cm;
         }
         .orange{
           width: 100%;
@@ -126,7 +130,7 @@
       <div class="green">
 				Side menu
 			</div>
-      <div class="box red">
+      <div class="red">
 				Rent, sell, buy Post
 			</div>
       <div class="orange">
