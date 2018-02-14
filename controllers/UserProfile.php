@@ -99,8 +99,19 @@
         }
       }
       @media screen and (min-width: 550px) {
-				.header {
-          width: 50%;
+				.sponsor_logo {
+					width: 23%;
+					padding-left: 2%;
+				}
+				.search_box{
+          width: 23%;
+					padding-left: 2%;
+				}
+
+				.navigation {
+					width: 48%;
+					text-align: right;
+					padding-right: 2%;
 				}
 
 				.header{
@@ -109,8 +120,9 @@
 				}
 
 				.leftside_menu{
-          width: 25%;
+          width: 23%;
 					height: 5cm;
+					padding-left: 2%;
         }
         .timeline{
           width: 75%;
@@ -130,20 +142,22 @@
     </style>
   </head>
   <body>
-		<div style="text-align:center;">
-			<h1>Block Diagram where Updating soon</h1>
-			<br><br>
-		</div>
+
 
     <div class="container">
-      <div class="header">
-				<div class="search_box">Search box</div>
+			<!--Sponsor logo-->
+			<div class="sponsor_logo header">
+				Sponsor LOGO
 			</div>
-      <div class="header">
+      <div class="search_box header">
+				<div class="search_box"><input type="text" placeholder="Search.." name="search"></div>
+			</div>
+      <div class="navigation header">
 				<span>Home</span> | <span>Logout</span>
 			</div>
       <div class="leftside_menu green">
-				Side menu
+				<p>News Feed</p>
+				<p>Most sold books</p>
 			</div>
       <div class="timeline">
 				<div style="padding:20px;">
