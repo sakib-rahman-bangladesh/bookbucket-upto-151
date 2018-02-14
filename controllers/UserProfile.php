@@ -56,7 +56,7 @@
 
       .orange {
         //background-color: #F79420;
-				background-color: #e9ebee;
+				//background-color: #e9ebee;
       }
     </style>
     <style type="text/css">
@@ -112,10 +112,7 @@
   </head>
   <body>
 		<div style="text-align:center;">
-			<h1>Updating Soon</h1>
-			<form action="" method="post">
-				<button type="submit" name="submit" style="border: 2px solid #a1a1a1; border-radius: 20px;background: #dddddd;"><b>Logout</b></button>
-			</form>
+			<h1>Block Diagram where Updating soon</h1>
 			<br><br>
 		</div>
 
@@ -133,9 +130,9 @@
 				Rent, sell, buy Post
 			</div>
       <div class="orange">
-				<div style="text-align: left; float:left; padding:10px;">Advertising Business</div>
-				<div style="text-align: right; padding:10px;">Privacy Terms Settings</div>
-				<p align="center"><span>Playlagom © 2018<span></p>
+				<div style="text-align: left; float:left; padding:10px;"><b><a href="#">Advertising</a> | <a href="#">Business</a></b></div>
+				<div style="text-align: right; padding:10px;"><b><a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Settings</a></b></div>
+				<div align="center" style="padding-bottom:20px;"><span>Playlagom © 2018<span></div>
 			</div>
     </div>
 
