@@ -16,7 +16,8 @@
 
       body {
         font-family: 'Roboto', sans-serif;
-				background-color: #e9ebee;
+				// background-color: #e9ebee;
+				background-color: #FFF;
       }
 
       .title {
@@ -54,7 +55,8 @@
       }
 
       .orange {
-        background-color: #F79420;
+        //background-color: #F79420;
+				background-color: #e9ebee;
       }
     </style>
     <style type="text/css">
@@ -76,27 +78,27 @@
         }
       }
       @media screen and (min-width: 550px) {
-				// Search and Navigation
 				.dark_blue {
-          width: 100%;
+          width: 50%;
+				}
+        .light_blue{
+          width: 50%;
+        }
 
-
-				.search_box {
-					width: 60%;
+				.dark_blue, .light_blue{
+					height: 1cm;
 				}
 
-				//
-        .light_blue{
-          width: 25%;
-        }
 				.green{
-          width: 75%;
+          width: 25%;
+					height: 10cm;
         }
         .red{
-          width: 33%;
+          width: 75%;
         }
         .orange{
-          width: 67%;
+          width: 100%;
+					height: 2cm;
         }
       }
       @media screen and (min-width: 800px) {
@@ -118,14 +120,23 @@
 		</div>
 
     <div class="container">
-      <div class="box dark_blue">
+      <div class="dark_blue">
 				<div class="search_box">Search box</div>
+			</div>
+      <div class="light_blue">
 				<div class="nav_options">Navigation Options</div>
 			</div>
-      <div class="box light_blue"></div>
-      <div class="box green"></div>
-      <div class="box red"></div>
-      <div class="box orange"></div>
+      <div class="green">
+				Side menu
+			</div>
+      <div class="box red">
+				Rent, sell, buy Post
+			</div>
+      <div class="orange">
+				<div style="text-align: left; float:left; padding:10px;">Advertising Business</div>
+				<div style="text-align: right; padding:10px;">Privacy Terms Settings</div>
+				<p align="center"><span>Playlagom © 2018<span></p>
+			</div>
     </div>
 
 		<?php
