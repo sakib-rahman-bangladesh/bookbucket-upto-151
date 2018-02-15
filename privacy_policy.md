@@ -5,7 +5,7 @@
 
 # Following principle for data collection #
 
-Consent From Design params
+TODO: Consent From Design params
 --------------------------
 Before interview
 - What data?
@@ -17,5 +17,5 @@ After interview
 - Data security
 - (online) Opt-in policy and (offline) Signature, date 
 
-SUI: Secondary use of information
+TODO: Secondary use of information (SUI)
 ---------------------------------
