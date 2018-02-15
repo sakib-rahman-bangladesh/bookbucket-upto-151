@@ -1,6 +1,7 @@
 # Implementation #
 
-**Motivation Instructor:** (Rashedul Amin Tuhin)[https://se.linkedin.com/in/rashedul-amin-tuhin-76b63151] sir, **Course:** Social & Professional Issues in Computing (CSE498)
+**Motivation Instructor:** [Rashedul Amin Tuhin](https://se.linkedin.com/in/rashedul-amin-tuhin-76b63151) sir, 
+**Course:** CSE498 - Social & Professional Issues in Computing
 
 ## Following principle for data collection ##
 
