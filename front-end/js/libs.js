@@ -1,7 +1,7 @@
 function submitOrder() {
     var book_name, author, quantity, cell_number;
 
-    // DEBUG: 
+    // DEBUG:
     // alert("inside post");
 
     book_name = document.getElementById("book_name").value;
@@ -55,14 +55,21 @@ function submitOrder() {
 function post() {
   console.log("Watching...");
   console.log("function: post()");
+  // DEBUG:
   // alert("Remove alert: works fine!");
   var description = document.getElementById("description").value;
+  var sell = document.getElementById("sell").checked;
 
   if(description == "") {
     document.getElementById("description_required").innerHTML = "Required!";
     console.log("- description: null");
     return false;
-  } else {
+  } else if (!sell) {
+    document.getElementById("description_required").innerHTML = "";
+    document.getElementById("sell_required").innerHTML = "Required!";
+    console.log("- sell: false");
+    return false;
+  }else {
     // TODO: make default: description textarea
     document.getElementById("description_required").innerHTML = "";
     console.log("- description: " + description);

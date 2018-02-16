@@ -188,15 +188,15 @@
 					<input type="radio" name="buy" value="buy"> Buy
 					<input type="radio" name="sell" value="sell"> Sell
 				</div>
-        <form action="Post.php" method="post" name="description">
+        <form action="Post.php" method="post">
           <div class="post">
             <p style="width:100px;font-weight:bold;">Make post</p>
             <textarea id="description" name="description" type="text" rows="4" cols="50" placeholder="Describe your book..." autofocus></textarea><span id="description_required" style="color:red;"></span>
             <div style="position: relative;">
               <div style="width:90px; background-color: #e9ebee; border-radius: 25px; padding: 10px; font-weight:bold;font-size:14px;">Upload image</div>
               <div style="position: absolute; left: 130px;top:8px;">
-                <input type="radio" name="rent" value="rent"> Rent
-                <input type="radio" name="sell" value="sell"> Sell
+                <input type="radio" id="rent" name="rent" value="rent"> Rent <span id="rent_required" style="color:red;"></span>
+                <input type="radio" id="sell" name="sell" value="sell"> Sell <span id="sell_required" style="color:red;"></span>
               </div>
               <button onclick="return post()" type="submit" name="Submit" style="position: absolute;bottom: 8px;right: 16px;font-size: 14px; color:blue; padding: 5px;"><span>POST</span></button>
             </div>
