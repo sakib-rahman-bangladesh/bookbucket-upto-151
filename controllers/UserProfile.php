@@ -170,7 +170,7 @@
 				<div class="post">
 					<p style="width:100px;font-weight:bold;">Make post</p>
 					<textarea rows="4" cols="50" placeholder="Describe your book..."></textarea>
-					<div style="background-color: #f6f7f9; border-radius: 25px; padding: 10px; width:100px;font-weight:bold;">Upload image</div>
+					<div style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:90px;font-weight:bold;font-size:14px;">Upload image</div>
 				</div>
 				<br>
 				<div class="post">
@@ -185,7 +185,7 @@
 			</div>
       <div class="bottom">
 				<div style="text-align: left; float:left; padding:10px;"><a class="no_underline" href="#">Advertising</a> <a class="no_underline" href="#">Business</a></div>
-				<div style="text-align: right; padding:10px;"><a class="no_underline" href="#">Privacy</a> <a class="no_underline" href="#">Terms</a> <a class="no_underline" href="#">Settings</a></div>
+				<div style="text-align: right; padding:10px;"><a class="no_underline" href="https://github.com/sakib-rahman-bangladesh/bookbucket/blob/master/privacy_policy.md">Privacy</a> <a class="no_underline" href="#">Terms</a> <a class="no_underline" href="#">Settings</a></div>
 				<div align="center" style="padding-bottom:20px;"><span>Playlagom © 2018<span></div>
 			</div>
     </div>
