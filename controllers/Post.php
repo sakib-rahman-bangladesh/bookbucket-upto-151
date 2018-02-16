@@ -8,7 +8,7 @@
     // $quantity = mysqli_real_escape_string($connection, $_POST['quantity']);
     // $cell_number = mysqli_real_escape_string($connection, $_POST['cell_number']);
 
-    // debug
+    // DEBUG:
     // echo "$description".'<br>';
     //echo "$author".'<br>';
     //echo "$quantity".'<br>';
@@ -21,7 +21,7 @@
 
     //display success message
     if($update) {
-      // echo "update success. Route: TODO";
+      // TODO: show user update success, Route: Done";
       header("Location: UserProfile.php");
 		} else {
       echo mysqli_connect_errno();

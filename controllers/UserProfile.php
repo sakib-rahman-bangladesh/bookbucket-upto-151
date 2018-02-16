@@ -182,7 +182,7 @@
 			</div>
       <div class="timeline">
 				<div style="padding:20px;">
-					Timeline view
+					<b>Timeline Posts</b>
 					<input type="radio" name="gender" value="male"> All
 					<input type="radio" name="gender" value="female"> Rent
 					<input type="radio" name="gender" value="other"> Buy
