@@ -93,9 +93,29 @@
         width: 100%;
       }
 
-      @media screen and (min-width: 450px) {
-        .light_blue, .green{
+      @media screen and (min-width: 350px) {
+        .sponsor_logo {
+					width: 50%;
+				}
+				.search_box{
           width: 50%;
+				}
+
+				.navigation {
+					width: 100%;
+					text-align: right;
+				}
+
+        .leftside_menu{
+          width: 100%;
+					height: 5cm;
+        }
+        .timeline{
+          width: 100%;
+        }
+        .bottom{
+          width: 100%;
+					height: 2cm;
         }
       }
       @media screen and (min-width: 550px) {
@@ -142,8 +162,6 @@
     </style>
   </head>
   <body>
-
-
     <div class="container">
 			<!--Sponsor logo-->
 			<div class="sponsor_logo header">
@@ -170,7 +188,15 @@
 				<div class="post">
 					<p style="width:100px;font-weight:bold;">Make post</p>
 					<textarea rows="4" cols="50" placeholder="Describe your book..."></textarea>
-					<div style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:90px;font-weight:bold;font-size:14px;">Upload image</div>
+          <div style="position: relative;">
+            <div style="width:90px; background-color: #e9ebee; border-radius: 25px; padding: 10px; font-weight:bold;font-size:14px;">Upload image</div>
+            <div style="position: absolute; left: 130px;top:8px;">
+              <input type="radio" name="gender" value="female"> Rent
+    					<input type="radio" name="gender" value="other"> Buy
+    					<input type="radio" name="gender" value="other"> Sell
+            </div>
+            <button style="position: absolute;bottom: 8px;right: 16px;font-size: 14px; color:blue; padding: 5px;"><span>POST</span></button>
+          </div>
 				</div>
 				<br>
 				<div class="post">
