@@ -188,7 +188,7 @@
 					<input type="radio" name="gender" value="other"> Sell
 				</div>
 
-        <form action="controllers/Post.php" method="post" name="description">
+        <form action="Post.php" method="post" name="description">
           <div class="post">
             <p style="width:100px;font-weight:bold;">Make post</p>
             <textarea id="description" name="description" type="text" rows="4" cols="50" placeholder="Describe your book..." autofocus></textarea><span id="description_required" style="color:red;"></span>

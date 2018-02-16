@@ -6,35 +6,34 @@
     # init db tables
 
     ## Table: 01
-    # post
-    $query = "CREATE TABLE post (
-      postID int(11) NOT NULL,
-      description varchar(255) NOT NULL
+    # user
+    $query = "CREATE TABLE user (
+      email varchar(50) NOT NULL,
+      firstName varchar(20) NOT NULL,
+      lastName varchar(20) NOT NULL,
+      password varchar(40) NOT NULL,
+      address varchar(50) NOT NULL,
+      profession varchar(20) NOT NULL,
+      contactNo int(11) NOT NULL,
+      researchArea varchar(100) NOT NULL,
+      hobby varchar(50) NOT NULL
     );";
-    echo "\n1. post(postID, description)\n";
+    echo "\n1. user(email, firstName, lastName, password, address, profession, contactNo, researchArea, hobby)\n";
 
     $result = mysqli_query($connect, $query) or die (mysqli_error($connect));
     if ($result) {
       echo " 1. created\n";
     }
 
-    # PRIMARY KEY
-    $query = "ALTER TABLE post
-      ADD PRIMARY KEY (postID);";
+    # Constraints
+    $query = "ALTER TABLE user
+      ADD PRIMARY KEY (email);";
     $result = mysqli_query($connect, $query) or die (mysqli_error($connect));
     if ($result) {
-      echo " 2. modified -- PRIMARY KEY (postID)\n";
+      echo " 2. modified -- PRIMARY KEY (email)\n";
     }
 
-    # AUTO_INCREMENT
-    $query = "ALTER TABLE post
-      MODIFY postID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;";
-    $result = mysqli_query($connect, $query) or die (mysqli_error($connect));
-    if ($result) {
-      echo " 3. modified -- AUTO_INCREMENT (postID)\n";
-    }
 
-/*
     ## Table: 02
     # question
     $query = "CREATE TABLE question (
@@ -226,7 +225,7 @@
     if ($result) {
       echo " 3. modified -- PRIMARY KEY (aID, cID)\n";
     }
-*/
+
     mysqli_close($connect);
   }
 

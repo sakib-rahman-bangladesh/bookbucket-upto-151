@@ -1,6 +1,6 @@
 <?php
   include_once("../config/db/connect/db_connect.php");
-
+  // DEBUG:
   if(isset($_POST['Submit'])) {
 
     $description = mysqli_real_escape_string($connection, $_POST['description']);
@@ -9,7 +9,7 @@
     // $cell_number = mysqli_real_escape_string($connection, $_POST['cell_number']);
 
     // debug
-    echo "$description".'<br>';
+    // echo "$description".'<br>';
     //echo "$author".'<br>';
     //echo "$quantity".'<br>';
     //echo "$cell_number".'<br>';
@@ -21,7 +21,7 @@
 
     //display success message
     if($update) {
-      echo "TODO";
+      echo "update success. Route: TODO";
       // header("Location: H.php");
 		} else {
       echo mysqli_connect_errno();
