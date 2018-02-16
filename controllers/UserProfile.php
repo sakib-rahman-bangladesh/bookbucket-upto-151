@@ -144,10 +144,10 @@
 					height: 5cm;
 					padding-left: 2%;
         }
-        .timeline{
+        .timeline {
           width: 75%;
         }
-        .bottom{
+        .bottom {
           width: 100%;
 					height: 2cm;
         }
@@ -195,15 +195,14 @@
             <div style="position: relative;">
               <div style="width:90px; background-color: #e9ebee; border-radius: 25px; padding: 10px; font-weight:bold;font-size:14px;">Upload image</div>
               <div style="position: absolute; left: 130px;top:8px;">
-                <input type="radio" name="gender" value="rest"> Rent
-                <input type="radio" name="gender" value="sell"> Sell
+                <input type="radio" name="rent" value="rent"> Rent
+                <input type="radio" name="sell" value="sell"> Sell
               </div>
               <button onclick="return post()" type="submit" name="Submit" style="position: absolute;bottom: 8px;right: 16px;font-size: 14px; color:blue; padding: 5px;"><span>POST</span></button>
             </div>
           </div>
         </form>
 				<br>
-
 
         <?php
           include("../config/db/connect/db_connect.php");
@@ -215,7 +214,10 @@
             echo 'Retrieval of data from Database Failed - #'.mysql_errno().': '.mysql_error();
           } else {
             if( mysqli_num_rows( $result )==0 ){
-              echo 'No Rows Returned';
+              echo '<div>';
+                  echo '<div class="post">';
+                    echo '<p class="purpose_price">No post found!<p>';
+                  echo '</div>';
             } else {
               while( $row = mysqli_fetch_array($result) ){
                 //echo ""."{$row['description']}".'<br>';

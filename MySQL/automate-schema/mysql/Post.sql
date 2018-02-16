@@ -18,6 +18,10 @@ ALTER TABLE post
 ALTER TABLE post
   MODIFY postID int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1;
 
+-- ADD COLUMN
+ALTER TABLE post
+ADD COLUMN goal VARCHAR(5);
+
 --
 -- Constraints for table `post`
 --

@@ -34,6 +34,13 @@
       echo " 3. modified -- AUTO_INCREMENT (postID)\n";
     }
 
+    # ADD COLUMN
+    $query = "ALTER TABLE post
+    ADD COLUMN goal VARCHAR(5);";
+    $result = mysqli_query($connect, $query) or die (mysqli_error($connect));
+    if ($result) {
+      echo " 4. modified -- ADD COLUMN (goal)\n";
+    }
 /*
     ## Table: 02
     # question
