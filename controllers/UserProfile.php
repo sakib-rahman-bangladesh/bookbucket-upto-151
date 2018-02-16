@@ -4,6 +4,7 @@
     <title>Mostly Fluid - Pattern</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="..\front-end\js\libs.js"></script>
     <style type="text/css">
       /*
       These are the default styles. No need to change these.
@@ -160,6 +161,7 @@
         }
       }
     </style>
+
   </head>
   <body>
     <div class="container">
@@ -187,7 +189,7 @@
 				</div>
 				<div class="post">
 					<p style="width:100px;font-weight:bold;">Make post</p>
-					<textarea rows="4" cols="50" placeholder="Describe your book..."></textarea>
+					<textarea id="description" name="description" type="text" rows="4" cols="50" placeholder="Describe your book..."></textarea><span id="description_required" style="color:red;"></span>
           <div style="position: relative;">
             <div style="width:90px; background-color: #e9ebee; border-radius: 25px; padding: 10px; font-weight:bold;font-size:14px;">Upload image</div>
             <div style="position: absolute; left: 130px;top:8px;">
@@ -195,7 +197,7 @@
     					<input type="radio" name="gender" value="other"> Buy
     					<input type="radio" name="gender" value="other"> Sell
             </div>
-            <button style="position: absolute;bottom: 8px;right: 16px;font-size: 14px; color:blue; padding: 5px;"><span>POST</span></button>
+            <button onclick="return post()" type="submit" name="POST" style="position: absolute;bottom: 8px;right: 16px;font-size: 14px; color:blue; padding: 5px;"><span>POST</span></button>
           </div>
 				</div>
 				<br>

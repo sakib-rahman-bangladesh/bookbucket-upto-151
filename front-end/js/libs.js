@@ -1,6 +1,8 @@
 function submitOrder() {
     var book_name, author, quantity, cell_number;
 
+    alert("inside post");
+
     book_name = document.getElementById("book_name").value;
     quantity = document.getElementById("quantity").value;
     author = document.forms["order_book"]["author"].value;
@@ -47,4 +49,20 @@ function submitOrder() {
     if (cell_number != "") {
       document.getElementById("cell_number_required").innerHTML = "";
     }
+}
+
+function post() {
+  console.log("Watching...");
+  console.log("function: post()");
+  // alert("Remove alert: works fine!");
+  var description = document.getElementById("description").value;
+
+  if(description == "") {
+    document.getElementById("description_required").innerHTML = "Required!";
+  } else {
+    // TODO: make blank description textarea
+    document.getElementById("description_required").innerHTML = "";
+    console.log(description);
+  }
+
 }

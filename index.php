@@ -3,7 +3,7 @@
   <head>
     <title>bookbucket</title>
     <link rel="stylesheet" type="text/css" href="front-end\css\index.css">
-    <script src="front-end\js\index.js"></script>
+    <script src="front-end\js\libs.js"></script>
   </head>
 
   <body>
