@@ -183,10 +183,10 @@
       <div class="timeline">
 				<div style="padding:20px;">
 					<b>Timeline Posts</b>
-					<input type="radio" name="gender" value="male"> All
-					<input type="radio" name="gender" value="female"> Rent
-					<input type="radio" name="gender" value="other"> Buy
-					<input type="radio" name="gender" value="other"> Sell
+					<input type="radio" name="all" value="all"> All
+					<input type="radio" name="rent" value="rent"> Rent
+					<input type="radio" name="buy" value="buy"> Buy
+					<input type="radio" name="sell" value="sell"> Sell
 				</div>
         <form action="Post.php" method="post" name="description">
           <div class="post">
@@ -218,10 +218,9 @@
                   echo '<div class="post">';
                     echo '<p class="purpose_price">No post found!<p>';
                   echo '</div>';
+              echo '</div>';
             } else {
               while( $row = mysqli_fetch_array($result) ){
-                //echo ""."{$row['description']}".'<br>';
-
                 echo '<div>';
                     echo '<div class="post">';
                       echo '<p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>';
@@ -237,19 +236,12 @@
             }
           }
         ?>
-
-
-      <div class="bottom">
-				<div style="text-align: left; float:left; padding:10px;"><a class="no_underline" href="#">Advertising</a> <a class="no_underline" href="#">Business</a></div>
-				<div style="text-align: right; padding:10px;"><a class="no_underline" href="https://github.com/sakib-rahman-bangladesh/bookbucket/blob/master/privacy_policy.md">Privacy</a> <a class="no_underline" href="#">Terms</a> <a class="no_underline" href="#">Settings</a></div>
-				<div align="center" style="padding-bottom:20px;"><span>Playlagom © 2018<span></div>
-			</div>
     </div>
-
-		<?php
-			if($_POST){
-				//header("Location:../index.php");
-			}
-		?>
+    <div class="bottom">
+      <div style="text-align: left; float:left; padding:10px;"><a class="no_underline" href="#">Advertising</a> <a class="no_underline" href="#">Business</a></div>
+      <div style="text-align: right; padding:10px;"><a class="no_underline" href="https://github.com/sakib-rahman-bangladesh/bookbucket/blob/master/privacy_policy.md">Privacy</a> <a class="no_underline" href="#">Terms</a> <a class="no_underline" href="#">Settings</a></div>
+      <div align="center" style="padding-bottom:20px;"><span><b>Playlagom © 2018</b><span></div>
+    </div>
+  </div>
   </body>
 </html>

@@ -11,7 +11,7 @@
       postID int(11) NOT NULL,
       description varchar(255) NOT NULL
     );";
-    echo "\n1. post(postID, description)\n";
+    echo "\n1. post(postID, description, purpose)\n";
 
     $result = mysqli_query($connect, $query) or die (mysqli_error($connect));
     if ($result) {
@@ -41,6 +41,16 @@
     if ($result) {
       echo " 4. modified -- ADD COLUMN (goal)\n";
     }
+
+    # RENAME COLUMN
+
+    $query = "ALTER TABLE post CHANGE goal purpose varchar(10);";
+    $result = mysqli_query($connect, $query) or die (mysqli_error($connect));
+    if ($result) {
+      echo " 5. modified -- RENAME COLUMN (purpose)\n";
+    }
+
+
 /*
     ## Table: 02
     # question
