@@ -161,8 +161,8 @@
         }
       }
     </style>
-
   </head>
+
   <body>
     <div class="container">
 			<!--Sponsor logo-->
@@ -181,7 +181,7 @@
 			</div>
       <div class="timeline">
 				<div style="padding:20px;">
-					Timeline view:
+					Timeline view
 					<input type="radio" name="gender" value="male"> All
 					<input type="radio" name="gender" value="female"> Rent
 					<input type="radio" name="gender" value="other"> Buy
@@ -203,15 +203,30 @@
           </div>
         </form>
 				<br>
-				<div class="post">
-					<p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>
-					<p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>
-					<br>
-					Book description from user...
-					<div class="post_img"></div>
-					<hr>
-					<p style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:40px;font-weight:bold;">CALL</p>
-				</div>
+
+        <div class="post">
+        <?php
+          include("../config/db/connect/db_connect.php");
+
+          $query = "SELECT * FROM post";
+          $result = mysqli_query($connection, $query);
+
+          if(! ($result) ){
+            echo 'Retrieval of data from Database Failed - #'.mysql_errno().': '.mysql_error();
+          } else {
+            echo '<p>test</p>';
+          }
+        ?>
+        <div>
+          <div class="post">
+            <p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>
+            <p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>
+            <br>
+            Book description from user...
+            <div class="post_img"></div>
+            <hr>
+            <p style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:40px;font-weight:bold;">CALL</p>
+          </div>
 			</div>
       <div class="bottom">
 				<div style="text-align: left; float:left; padding:10px;"><a class="no_underline" href="#">Advertising</a> <a class="no_underline" href="#">Business</a></div>
@@ -222,7 +237,7 @@
 
 		<?php
 			if($_POST){
-				header("Location:../index.php");
+				//header("Location:../index.php");
 			}
 		?>
   </body>
