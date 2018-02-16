@@ -21,8 +21,8 @@
 
     //display success message
     if($update) {
-      echo "update success. Route: TODO";
-      // header("Location: H.php");
+      // echo "update success. Route: TODO";
+      header("Location: UserProfile.php");
 		} else {
       echo mysqli_connect_errno();
     }

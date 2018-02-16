@@ -39,7 +39,6 @@
       }
 
       .green {
-        //background-color: #0C8542;
 				background-color: #f6f7f9;
       }
 
@@ -170,7 +169,9 @@
 				Sponsor LOGO
 			</div>
       <div class="search_box header">
-				<div class="search_box"><input type="text" placeholder="Search.." name="search"></div>
+				<div class="search_box">
+          <input type="text" placeholder="Search.." name="search">
+        </div>
 			</div>
       <div class="navigation header">
 				<span>Home</span> | <span>Logout</span>
@@ -187,7 +188,6 @@
 					<input type="radio" name="gender" value="other"> Buy
 					<input type="radio" name="gender" value="other"> Sell
 				</div>
-
         <form action="Post.php" method="post" name="description">
           <div class="post">
             <p style="width:100px;font-weight:bold;">Make post</p>
@@ -204,7 +204,7 @@
         </form>
 				<br>
 
-        <div class="post">
+
         <?php
           include("../config/db/connect/db_connect.php");
 
@@ -214,20 +214,29 @@
           if(! ($result) ){
             echo 'Retrieval of data from Database Failed - #'.mysql_errno().': '.mysql_error();
           } else {
-            echo '<p>test</p>';
+            if( mysqli_num_rows( $result )==0 ){
+              echo 'No Rows Returned';
+            } else {
+              while( $row = mysqli_fetch_array($result) ){
+                //echo ""."{$row['description']}".'<br>';
+
+                echo '<div>';
+                    echo '<div class="post">';
+                      echo '<p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>';
+                      echo '<p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>';
+                      echo '<br>';
+                      echo "{$row['description']}";
+                      echo '<div class="post_img"></div>';
+                      echo '<hr>';
+                      echo '<p style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:40px;font-weight:bold;">CALL</p>';
+                    echo '</div>';
+                echo '</div><br>';
+              }
+            }
           }
         ?>
-        <div>
-          <div class="post">
-            <p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>
-            <p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>
-            <br>
-            Book description from user...
-            <div class="post_img"></div>
-            <hr>
-            <p style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:40px;font-weight:bold;">CALL</p>
-          </div>
-			</div>
+
+
       <div class="bottom">
 				<div style="text-align: left; float:left; padding:10px;"><a class="no_underline" href="#">Advertising</a> <a class="no_underline" href="#">Business</a></div>
 				<div style="text-align: right; padding:10px;"><a class="no_underline" href="https://github.com/sakib-rahman-bangladesh/bookbucket/blob/master/privacy_policy.md">Privacy</a> <a class="no_underline" href="#">Terms</a> <a class="no_underline" href="#">Settings</a></div>
