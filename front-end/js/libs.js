@@ -1,7 +1,8 @@
 function submitOrder() {
     var book_name, author, quantity, cell_number;
 
-    alert("inside post");
+    // DEBUG: 
+    // alert("inside post");
 
     book_name = document.getElementById("book_name").value;
     quantity = document.getElementById("quantity").value;
@@ -65,6 +66,5 @@ function post() {
     // TODO: make default: description textarea
     document.getElementById("description_required").innerHTML = "";
     console.log("- description: " + description);
-    return true;
   }
 }
