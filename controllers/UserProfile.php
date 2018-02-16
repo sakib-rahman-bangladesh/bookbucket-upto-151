@@ -191,7 +191,7 @@
         <form action="controllers/Post.php" method="post" name="description">
           <div class="post">
             <p style="width:100px;font-weight:bold;">Make post</p>
-            <textarea id="description" name="description" type="text" rows="4" cols="50" placeholder="Describe your book..."></textarea><span id="description_required" style="color:red;"></span>
+            <textarea id="description" name="description" type="text" rows="4" cols="50" placeholder="Describe your book..." autofocus></textarea><span id="description_required" style="color:red;"></span>
             <div style="position: relative;">
               <div style="width:90px; background-color: #e9ebee; border-radius: 25px; padding: 10px; font-weight:bold;font-size:14px;">Upload image</div>
               <div style="position: absolute; left: 130px;top:8px;">
