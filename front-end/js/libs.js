@@ -59,10 +59,12 @@ function post() {
 
   if(description == "") {
     document.getElementById("description_required").innerHTML = "Required!";
+    console.log("- description: null");
+    return false;
   } else {
-    // TODO: make blank description textarea
+    // TODO: make default: description textarea
     document.getElementById("description_required").innerHTML = "";
-    console.log(description);
+    console.log("- description: " + description);
+    return true;
   }
-
 }
