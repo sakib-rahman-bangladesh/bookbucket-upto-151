@@ -9,7 +9,7 @@ Account sources (possibility)
 -----------------------------
 **Account source**
   - Ads
-    - &#x1F49A; Google ads | Sponsors **Develop, Engage, Earn**
+    - &#x1F49A; Google ads | Sponsors **Develop** quality product, **Engage** users, **Earn** money
     - book sellers (nilkhet)
     - writers
   - Products
