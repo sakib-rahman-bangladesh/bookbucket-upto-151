@@ -2,8 +2,11 @@
 
 Business first then product development
 ---------------------------------------
-Business means profit, no emotions. No money, no project, no problem solution.
+**Focus:** Business means profit, no emotions. No money, no project, no problem solution.
 
+**Start:** Start DevOps, Follow RERO (Release early, release often, listen to customers). UX is all responsibility, not the developers only. Don't depends on the best tools, depends on the suitable ones.
+
+**End:** End with live stable completion. (Move fast, make stable, revise and fix, get shit done.)
 
 Account sources (possibility)
 -----------------------------
