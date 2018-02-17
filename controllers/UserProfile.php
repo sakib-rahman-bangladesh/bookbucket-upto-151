@@ -238,7 +238,7 @@
         ?>
     </div>
     <div class="bottom">
-      <div style="text-align: left; float:left; padding:10px;"><a class="no_underline" href="#">Advertising</a> <a class="no_underline" href="#">Business</a></div>
+      <div style="text-align: left; float:left; padding:10px;"><a class="no_underline" href="#">Advertising</a> <a class="no_underline" href="https://github.com/sakib-rahman-bangladesh/bookbucket/blob/master/business.md">Business</a></div>
       <div style="text-align: right; padding:10px;"><a class="no_underline" href="https://github.com/sakib-rahman-bangladesh/bookbucket/blob/master/privacy_policy.md">Privacy</a> <a class="no_underline" href="#">Terms</a> <a class="no_underline" href="#">Settings</a></div>
       <div align="center" style="padding-bottom:20px;"><span><b>Playlagom © 2018</b><span></div>
     </div>
