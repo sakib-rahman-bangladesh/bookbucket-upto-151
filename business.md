@@ -1,4 +1,5 @@
 # Analysis: Business and dev #
+&#x1F53B; Cashflow: inactive
 
 Business and dev framework
 --------------------------
