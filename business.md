@@ -10,7 +10,7 @@ Business and dev (Framework)
 
 **End:** End with live, stable completion. (Move fast, make stable, revise and fix, get shit done.)
 
-Account sources (possibility)
+Accounts (possibility)
 -----------------------------
 **Account source**
   - Ads
