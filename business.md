@@ -1,8 +1,8 @@
 # Analysis: Business and dev #
 &#x1F53B; Cashflow: **Inactive**
 
-Business and dev framework
---------------------------
+Framework: Business and dev
+---------------------------
 **Focus:** Business means profit, no emotions. No money, no project, no problem solution.
 
 **Start:** Start DevOps, Follow RERO (Release early, release often, listen to customers). UX is all responsibility, not the developers only. Don't depends on the best tools for development, depends on the suitable ones.
