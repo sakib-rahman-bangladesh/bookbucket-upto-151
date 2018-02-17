@@ -50,7 +50,7 @@ git add .
 
 echo 04. Done...Committing a modified version of a file to the repo.
 echo 
-git commit -m "Update business.md"
+git commit -m "Update README.md"
 
 
 ############
