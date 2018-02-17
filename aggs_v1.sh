@@ -50,7 +50,7 @@ git add .
 
 echo 04. Done...Committing a modified version of a file to the repo.
 echo 
-git commit -m "Create php files: test purpose"
+git commit -m "Update changes"
 
 
 ############

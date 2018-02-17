@@ -183,7 +183,7 @@
       <div class="timeline">
         <form action="SearchQuery.php" method="get">
   				<div style="padding:20px;">
-  					<b><a href="#">Timeline</a> Posts</b>
+  					<b><a href="UserProfile.php">Timeline</a> Posts</b>
             <!--
               TODO: Implement|make functional through radio button
               <input type="radio" name="all" value="all"> All
@@ -213,33 +213,77 @@
 				<br>
 
         <?php
-          include("../config/db/connect/db_connect.php");
+          if(isset($_GET['Rent'])) {
+              rentFunc();
+          }
+          if(isset($_GET['Sell'])) {
+              sellFunc();
+          }
 
-          $query = "SELECT * FROM post";
-          $result = mysqli_query($connection, $query);
+          function sellFunc(){
+            // DEBUG: echo "sellFunc()";
+            include("../config/db/connect/db_connect.php");
 
-          if(! ($result) ){
-            echo 'Retrieval of data from Database Failed - #'.mysql_errno().': '.mysql_error();
-          } else {
-            if( mysqli_num_rows( $result )==0 ){
-              echo '<div>';
-                  echo '<div class="post">';
-                    echo '<p class="purpose_price">No post found!<p>';
-                  echo '</div>';
-              echo '</div>';
+            $query = "SELECT * FROM post where purpose='sell'";
+            $result = mysqli_query($connection, $query);
+
+            if(! ($result) ){
+              echo 'Retrieval of data from Database Failed - #'.mysql_errno().': '.mysql_error();
             } else {
-              while( $row = mysqli_fetch_array($result) ){
+              if( mysqli_num_rows( $result )==0 ){
                 echo '<div>';
                     echo '<div class="post">';
-                      echo '<p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>';
-                      echo '<p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>';
-                      echo '<br>';
-                      echo "{$row['description']}";
-                      echo '<div class="post_img"></div>';
-                      echo '<hr>';
-                      echo '<p style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:40px;font-weight:bold;">CALL</p>';
+                      echo '<p class="purpose_price">No post found!<p>';
                     echo '</div>';
-                echo '</div><br>';
+                echo '</div>';
+              } else {
+                while( $row = mysqli_fetch_array($result) ){
+                  echo '<div>';
+                      echo '<div class="post">';
+                        echo '<p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>';
+                        echo '<p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>';
+                        echo '<br>';
+                        echo "{$row['description']}";
+                        echo '<div class="post_img"></div>';
+                        echo '<hr>';
+                        echo '<p style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:40px;font-weight:bold;">CALL</p>';
+                      echo '</div>';
+                  echo '</div><br>';
+                }
+              }
+            }
+          }
+
+          function rentFunc(){
+            // DEBUG: echo "rentFunc()";
+            include("../config/db/connect/db_connect.php");
+
+            $query = "SELECT * FROM post where purpose='rent'";
+            $result = mysqli_query($connection, $query);
+
+            if(! ($result) ){
+              echo 'Retrieval of data from Database Failed - #'.mysql_errno().': '.mysql_error();
+            } else {
+              if( mysqli_num_rows( $result )==0 ){
+                echo '<div>';
+                    echo '<div class="post">';
+                      echo '<p class="purpose_price">No post found!<p>';
+                    echo '</div>';
+                echo '</div>';
+              } else {
+                while( $row = mysqli_fetch_array($result) ){
+                  echo '<div>';
+                      echo '<div class="post">';
+                        echo '<p class="purpose_price"><span>Purpose: Rent<span>, <span>Price: 280 tk</span><p>';
+                        echo '<p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>';
+                        echo '<br>';
+                        echo "{$row['description']}";
+                        echo '<div class="post_img"></div>';
+                        echo '<hr>';
+                        echo '<p style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:40px;font-weight:bold;">CALL</p>';
+                      echo '</div>';
+                  echo '</div><br>';
+                }
               }
             }
           }

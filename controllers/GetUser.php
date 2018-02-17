@@ -44,7 +44,6 @@ if($_POST) {
                 if( mysqli_num_rows( $result )==0 ){
                   echo '<tr><td colspan="4">No Rows Returned</td></tr>';
                 } else {
-
                   while( $row = mysqli_fetch_array($result) ){
                     echo "<tr>";
                 		echo "<td>"."{$row['first_name']}"."</td>";
@@ -56,7 +55,6 @@ if($_POST) {
                   }
                 }
               ?>
-
         </table>
 <?php
     }
