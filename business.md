@@ -15,4 +15,4 @@ Account sources (possibility)
     - Books
     - relevant surprise gifts
 
-Adding keys from distributed notebooks, where its frequently updatable.
+Adding keys frequently from distributed notebooks.
