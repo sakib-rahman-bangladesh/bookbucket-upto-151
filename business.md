@@ -1,6 +1,7 @@
-# Analysis: Business and dev #
+# Status: FAILED #
 &#x1F53B; Cashflow: **Inactive** (Detected: Outcome 0 and loss project)
 
+# Analysis for Business and dev#
 Framework: Business and dev
 ---------------------------
 **Focus:** Business means profit, no emotions. No money, no project, no problem solution.
