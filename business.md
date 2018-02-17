@@ -11,6 +11,8 @@ Account sources (possibility)
   - Ads
     - book sellers (nilkhet)
     - writers
-  - Books
+  - Products
+    - Books
+    - relevant surprise gifts
 
 Adding keys from distributed notebooks, where its frequently updatable.
