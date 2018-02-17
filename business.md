@@ -1,5 +1,5 @@
 # Analysis: Business and dev #
-&#x1F53B; Cashflow: **Inactive**
+&#x1F53B; Cashflow: **Inactive** (Detected: Outcome 0 and loss project)
 
 Framework: Business and dev
 ---------------------------
