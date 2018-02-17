@@ -1,9 +1,9 @@
 # FAILED (Status) #
-&#x1F53B; Cashflow: **Inactive**, Business outcome 0, loss project and waste of time (Detected)
+&#x1F53B; Cashflow: **Inactive**, Business outcome 0, loss project and waste of time (**Detected**)
 
 Business and dev (Framework)
 ----------------------------
-**Focus:** Business means profit, no emotions. No money, no project, no problem solution.
+**Focus:** Business means profit, no emotions. No money, no project, no problem solution from land to space.
 
 **Start:** Start DevOps, Follow RERO (Release early, release often, listen to customers). UX is all responsibility, not the developers only. Don't depends on the best tools for development, depends on the suitable ones.
 
