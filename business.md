@@ -5,7 +5,7 @@ Business and dev (Framework)
 ----------------------------
 **Focus:** Business means profit, no emotions. No money, no project, no problem solution from land to space.
 
-**Start:** Start DevOps, Follow RERO (Release early, release often, listen to customers). UX is all responsibility, not the developers only. Don't depends on the best tools for development, depends on the suitable ones.
+**Start:** Start DevOps, Follow RERO (Release early, release often, listen to customers). Make awesome look and feel(UI) and UX is all responsibility, not the developers only. Don't depends on the best tools for development, depends on the suitable ones.
 
 **End:** End with live, stable completion. (Move fast, make stable, revise and fix, get shit done.)
 
