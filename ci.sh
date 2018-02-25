@@ -1,7 +1,9 @@
 ##################################################
-### Tool   : aggs_v1.sh (19-05-2017)           ###
-### aggs   : automate git github setup         ###
-### target : to make package management system ###
+### Script : ci.sh (14-10-2017)                ###
+### CI     : Continious Integration            ###
+### Target : Tool dev			                     ###
+###	     Automated Continious Integration      ###
+###	     among local & remote repo	           ###
 ##################################################
 
 
@@ -21,7 +23,7 @@
 ############
 
 echo
-echo 01. Done...Initializing who am I.
+echo [ Done ]  Initializing who am I.
 git config --global user.email "sakib.rahman.0000@gmail.com"
 git config --global user.name "Sakib Rahman"
 
@@ -29,8 +31,8 @@ git config --global user.name "Sakib Rahman"
 ############
 # Step: 02 #
 ############
- 
-echo 02. Done...Initializing a new Git repo for this project.
+
+echo [ Done ]  Initializing a new Git repo for this project.
 echo
 git init
 
@@ -40,7 +42,7 @@ git init
 ############
 
 echo
-echo 03. Done...Saving changes to the repository.
+echo [ Done ]  Saving changes to the repository.
 git add .
 
 
@@ -48,10 +50,19 @@ git add .
 # Step: 04 #
 ############
 
-echo 04. Done...Committing a modified version of a file to the repo.
-echo 
-git commit -m "Update changes"
+echo [ Done ]  Committing...
+echo
+#############################
+## follow up simple commit ##
+#############################
+## Rename 1_GAME_CHEATSHEET_JAVA.md to 1_GAME_DEV_CHEATSHEET_JAVA.md
+## Create file.ext
+## Update file.ext
+## Delete file.ext
+## Solved issues
+## Default: Commit skipped|forgotten
 
+git commit -m "Change detected, upload"
 
 ############
 # Step: 05 #
@@ -59,7 +70,7 @@ git commit -m "Update changes"
 
 # List your existing remotes in order to get the name of the remote you want to change.
 echo
-echo 05. Done...checking remote origin.
+echo [ Done ]  checking remote origin.
 echo
 git remote -v
 
@@ -70,16 +81,14 @@ git remote -v
 
 # Change your remote's URL from SSH to HTTPS with the git remote set-url command.
 echo
-echo 06. Done...Updating remote URL.
+echo [ Done ]  Updating remote URL.
 git remote set-url origin https://github.com/Sakib-Rahman-Bangladesh/bookbucket
-
-
 ############
 # Step: 07 #
 ############
 
 # Verify that the remote URL has changed.
-echo 07. Done...Verifying remote URL.
+echo [ Done ]  Verifying remote URL.
 echo
 git remote -v
 
