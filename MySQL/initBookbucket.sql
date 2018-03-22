@@ -91,7 +91,37 @@ INSERT INTO `post` (`postID`, `description`, `purpose`) VALUES
 -- ADD CONSTRAINT: PRIMARY KEY
 ALTER TABLE `post`
   ADD PRIMARY KEY (`postID`);
-  
+
 -- MODIFY CONSTRAINT: AUTO_INCREMENT
 ALTER TABLE `post`
   MODIFY `postID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+-- add COLUMN
+ALTER TABLE post
+ADD COLUMN price VARCHAR(5);
+
+ALTER TABLE post
+ADD COLUMN location VARCHAR(10);
+
+ALTER TABLE post
+  ADD COLUMN postTime datetime;
+
+
+-- UPDATE COLUMN
+# price
+UPDATE post SET price=1250 WHERE postID = 2;
+
+# location
+UPDATE post SET location='Aftabnagar' WHERE postID = 1;
+UPDATE post SET location='Rampura' WHERE postID = 2;
+UPDATE post SET location='Badda' WHERE postID = 3;
+UPDATE post SET location='Dhanmondi' WHERE postID = 4;
+UPDATE post SET location='Shahbag' WHERE postID = 5;
+
+# postTime
+UPDATE post SET postTime='2013-05-01 00:22:35' WHERE postID = 1;
+UPDATE post SET postTime='2014-05-01 00:22:35' WHERE postID = 2;
+UPDATE post SET postTime='2015-05-01 00:22:35' WHERE postID = 3;
+UPDATE post SET postTime='2016-05-01 00:22:35' WHERE postID = 4;
+UPDATE post SET postTime='2017-05-01 00:22:35' WHERE postID = 5;
+UPDATE post SET postTime='2018-01-01 00:22:35' WHERE postID = 6;

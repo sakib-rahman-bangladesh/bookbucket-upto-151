@@ -5,11 +5,10 @@
 	<title>User List</title>
 </head>
 <body>
-
   <div style="text-align:center;">
     <div style="border: 2px solid #a1a1a1; border-radius: 20px; display: inline-block;border: 1px solid #989fa5; text-align:center;background:#e8eef4;">
       <form action="" method="post" name="" style="padding: 10px;">
-            <button type="submit" name="submit" style="border: 2px solid #a1a1a1; border-radius: 20px;background: #dddddd;"><b>View User</b></button>
+        <button type="submit" name="submit" style="border: 2px solid #a1a1a1; border-radius: 20px;background: #dddddd;"><b>View User</b></button>
       </form>
 			<a href="http://localhost/bookbucket/">Home</a>
     </div>

@@ -58,7 +58,7 @@ function post() {
   // DEBUG:
   // alert("Remove alert: works fine!");
   var description = document.getElementById("description").value;
-  var sell = document.getElementById("sell").checked;
+  var sell = document.getElementById("purpose").checked;
 
   if(description == "") {
     document.getElementById("description_required").innerHTML = "Required!";

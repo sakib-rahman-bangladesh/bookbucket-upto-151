@@ -61,8 +61,9 @@ echo
 ## Delete file.ext
 ## Solved issues
 ## Default: Commit skipped|forgotten
+## 🔴 TODO: Good update but fix errors
 
-git commit -m "Change detected, upload"
+git commit -m "🔴TODO: Fix errors at radio"
 
 ############
 # Step: 05 #

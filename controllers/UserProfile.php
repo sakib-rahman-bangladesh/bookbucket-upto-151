@@ -4,6 +4,7 @@
     <title>Mostly Fluid - Pattern</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="..\css\constant-styles.css">
     <script src="..\front-end\js\libs.js"></script>
     <style type="text/css">
       /*
@@ -174,7 +175,7 @@
         </div>
 			</div>
       <div class="navigation header">
-				<span>Home</span> | <span>Logout</span>
+				<span>Home</span> | <span><a class="white" href="http://localhost/bookbucket">Logout</a></span>
 			</div>
       <div class="leftside_menu green">
 				<p>News Feed</p>
@@ -199,12 +200,12 @@
         <form action="Post.php" method="post">
           <div class="post">
             <p style="width:100px;font-weight:bold;">Make post</p>
-            <textarea id="description" name="description" type="text" rows="4" cols="50" placeholder="Describe your book..." autofocus></textarea><span id="description_required" style="color:red;"></span>
+            <textarea id="description" name="description" type="text" rows="4" cols="50" placeholder="Describe your book..." autofocus required></textarea><span id="description_required" style="color:red;"></span>
             <div style="position: relative;">
               <div style="width:90px; background-color: #e9ebee; border-radius: 25px; padding: 10px; font-weight:bold;font-size:14px;">Upload image</div>
               <div style="position: absolute; left: 130px;top:8px;">
-                <input type="radio" id="rent" name="rent" value="rent"> Rent <span id="rent_required" style="color:red;"></span>
-                <input type="radio" id="sell" name="sell" value="sell"> Sell <span id="sell_required" style="color:red;"></span>
+                <input onclick="check(this.value)" type="radio" id="purpose" name="purpose" value="rent"> Rent <span id="rent_required" style="color:red;"></span>
+                <input onclick="check(this.value)" type="radio" id="purpose" name="purpose" value="sell"> Sell <span id="sell_required" style="color:red;"></span>
               </div>
               <button onclick="return post()" type="submit" name="Submit" style="position: absolute;bottom: 8px;right: 16px;font-size: 14px; color:blue; padding: 5px;"><span>POST</span></button>
             </div>
@@ -215,34 +216,127 @@
         <?php
           include("../config/db/connect/db_connect.php");
 
-          $query = "SELECT * FROM post";
+          $query = "SELECT * FROM post order by postTime desc";
           $result = mysqli_query($connection, $query);
 
           if(! ($result) ){
             echo 'Retrieval of data from Database Failed - #'.mysql_errno().': '.mysql_error();
           } else {
             if( mysqli_num_rows( $result )==0 ){
-              echo '<div>';
-                  echo '<div class="post">';
-                    echo '<p class="purpose_price">No post found!<p>';
-                  echo '</div>';
-              echo '</div>';
+              noPostFound();
             } else {
               while( $row = mysqli_fetch_array($result) ){
-                echo '<div>';
-                    echo '<div class="post">';
-                      echo '<p class="purpose_price"><span>Purpose: Sell<span>, <span>Price: 280 tk</span><p>';
-                      echo '<p class="time_location"><span>1 hr ago<span>, <span>Aftabnagar</span><p>';
-                      echo '<br>';
-                      echo "{$row['description']}";
-                      echo '<div class="post_img"></div>';
-                      echo '<hr>';
-                      echo '<p style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:40px;font-weight:bold;">CALL</p>';
-                    echo '</div>';
-                echo '</div><br>';
+                showResult($row);
               }
             }
           }
+
+          //Function definition
+          function timeAgo($time_ago) {
+              $time_ago = strtotime($time_ago);
+              $cur_time   = time();
+              //echo "<br><br> $cur_time <br><br>";
+              $time_elapsed   = $cur_time - $time_ago;
+              $seconds    = $time_elapsed ;
+              $minutes    = round($time_elapsed / 60 );
+              $hours      = round($time_elapsed / 3600);
+              $days       = round($time_elapsed / 86400 );
+              $weeks      = round($time_elapsed / 604800);
+              $months     = round($time_elapsed / 2600640 );
+              $years      = round($time_elapsed / 31207680 );
+              // Seconds
+              if($seconds <= 60){
+                  return "just now";
+              }
+              //Minutes
+              else if($minutes <=60){
+                  if($minutes==1){
+                      return "one minute ago";
+                  }
+                  else{
+                      return "$minutes minutes ago";
+                  }
+              }
+              //Hours
+              else if($hours <=24){
+                  if($hours==1){
+                      return "an hour ago";
+                  }else{
+                      return "$hours hrs ago";
+                  }
+              }
+              //Days
+              else if($days <= 7){
+                  if($days==1){
+                      return "yesterday";
+                  }else{
+                      return "$days days ago";
+                  }
+              }
+              //Weeks
+              else if($weeks <= 4.3){
+                  if($weeks==1){
+                      return "a week ago";
+                  }else{
+                      return "$weeks weeks ago";
+                  }
+              }
+              //Months
+              else if($months <=12){
+                  if($months==1){
+                      return "a month ago";
+                  }else{
+                      return "$months months ago";
+                  }
+              }
+              //Years
+              else{
+                  if($years==1){
+                      return "one year ago";
+                  }else{
+                      return "$years years ago";
+                  }
+              }
+          }
+
+          function showResult ($row){
+
+            // DEBUG: timestamp
+            // $mysqltime = $row['postTime'];
+            // echo "$mysqltime...";
+            // $time_elapsed = timeAgo($row['postTime']); //The argument $time_ago is in timestamp (Y-m-d H:i:s)format.
+            // echo "post time: $time_elapsed" . "<br><br>";
+            // echo time_elapsed_string($row['postTime']);
+
+            // echo time_elapsed_string('2013-05-01 00:22:35') . '<br>';
+            // echo time_elapsed_string('@1367367755') . '<br>'; # timestamp input
+            // echo time_elapsed_string('2013-05-01 00:22:35', true) . '<br><br>';
+
+            // $time_ago = "2018-03-22 10:50:35";
+            // $time_elapsed = timeAgo($time_ago); //The argument $time_ago is in timestamp (Y-m-d H:i:s)format.
+            // echo "$time_elapsed" . "<br><br>";
+
+            echo '<div>';
+                echo '<div class="post">';
+                echo '<p>Purpose: '. '<span class="bold uppercase">' . "{$row['purpose']}" . '</span>, Price: <span class="bold">' . "{$row['price']}" . ' tk<p>';
+                echo '<p class="time_location"><span>' . timeAgo($row['postTime']) . '<span>, <span class="uppercase">' . "{$row['location']}" . '</span><p>';
+                echo '<br>';
+                echo "{$row['description']}";
+                  echo '<div class="post_img"></div>';
+                  echo '<hr>';
+                  echo '<p style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:40px;font-weight:bold;">CALL</p>';
+                echo '</div>';
+            echo '</div><br>';
+          }
+
+          function noPostFound () {
+            echo '<div>';
+                echo '<div class="post">';
+                  echo '<p class="bold">No post found!<p>';
+                echo '</div>';
+            echo '</div>';
+          }
+
         ?>
     </div>
     <div class="bottom">
