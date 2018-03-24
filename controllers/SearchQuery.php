@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="..\css\constant-styles.css">
-    <script src="..\front-end\js\libs.js"></script>
+    <script src="..\js\libs.js"></script>
     <style type="text/css">
       /*
       These are the default styles. No need to change these.
@@ -167,7 +167,7 @@
 			</div>
       <div class="search_box header">
 				<div class="search_box">
-          <input type="text" placeholder="Search.." name="search">
+          <input type="text" placeholder="TODO: Search.." name="search">
         </div>
 			</div>
       <div class="navigation header">
@@ -180,7 +180,7 @@
       <div class="timeline">
         <form action="SearchQuery.php" method="get">
   				<div style="padding:20px;">
-  					<b><a href="UserProfile.php">Timeline</a> Posts</b>
+  					<b><a href="UserProfile.php">Timeline</a> <span style="margin-left: 10px;">See posts only</span></b>
             <!--
               TODO: Implement|make functional through radio button
               <input type="radio" name="all" value="all"> All
@@ -188,7 +188,6 @@
     					<input type="radio" name="buy" value="buy"> Buy
     					<input type="radio" name="sell" value="sell"> Sell
             -->
-  					<input type="radio" name="all" value="all"> All
   					<input type="submit" name="Rent" value="Rent">
   					<input type="submit" name="Sell" value="Sell">
   				 </div>
@@ -196,21 +195,23 @@
         <form action="Post.php" method="post">
           <div class="post">
             <p style="width:100px;font-weight:bold;">Make post</p>
-            <textarea id="description" name="description" type="text" rows="4" cols="50" placeholder="Describe your book..." autofocus required></textarea><span id="description_required" style="color:red;"></span>
+            <textarea id="description" name="description" type="text" rows="4" cols="60" placeholder="Describe your book..." autofocus required></textarea><span id="description_required" style="color:red;"></span>
             <div style="position: relative;">
               <div style="width:90px; background-color: #e9ebee; border-radius: 25px; padding: 10px; font-weight:bold;font-size:14px;">Upload image</div>
               <div style="position: absolute; left: 130px;top:8px;">
-                <input  onclick="check(this.value)" type="radio" id="rent" name="purpose" value="rent"> Rent <span id="rent_required" style="color:red;"></span>
-                <input  onclick="check(this.value)" type="radio" id="sell" name="purpose" value="sell"> Sell <span id="sell_required" style="color:red;"></span>
+                <input required type="radio" name="purpose" value="rent"> Rent
+                <input required type="radio" name="purpose" value="sell"> Sell
+                <!-- number   supported by HTML5: https://www.w3schools.com/html/html_form_input_types.asp-->
+                <input required type="number" name="price" placeholder="price" style="width: 50px; margin-left: 30px;">
+                <input required type="text" name="location" placeholder="location" style="width: 60px; margin-left: 5px;">
               </div>
-              <button onclick="return post()" type="submit" name="Submit" style="position: absolute;bottom: 8px;right: 16px;font-size: 14px; color:blue; padding: 5px;"><span>POST</span></button>
+              <button type="submit" name="Submit" style="position: absolute; bottom: 8px; right:16px; font-size: 14px; color:blue; padding: 5px;"><span>POST</span></button>
             </div>
           </div>
         </form>
 				<br>
 
       <?php
-
         if(isset($_GET['Rent'])) {
             rentFunc();
         }
@@ -220,7 +221,7 @@
 
         function sellFunc(){
           // DEBUG: echo "sellFunc()";
-          include("../config/db/connect/db_connect.php");
+          include("../config/db/connect/DBConnect.php");
 
           $query = "SELECT * FROM post where purpose='sell' order by postTime desc";
           $result = mysqli_query($connection, $query);
@@ -240,7 +241,7 @@
 
         function rentFunc(){
             // DEBUG: echo "rentFunc()";
-            include("../config/db/connect/db_connect.php");
+            include("../config/db/connect/DBConnect.php");
 
             $query = "SELECT * FROM post where purpose='rent' order by postTime desc";
             $result = mysqli_query($connection, $query);

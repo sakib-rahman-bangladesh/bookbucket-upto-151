@@ -1,5 +1,5 @@
 <?php
-  include_once("../config/db/connect/db_connect.php");
+  include_once("../config/db/connect/DBConnect.php");
 
   if(isset($_POST['Submit'])) {
 
@@ -21,7 +21,7 @@
 
     //display success message
     if($update) {
-      header("Location: orderResult.php");
+      header("Location: OrderResult.php");
 		} else {
       echo mysqli_connect_errno();
     }

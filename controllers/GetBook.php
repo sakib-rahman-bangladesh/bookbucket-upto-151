@@ -23,7 +23,7 @@
 <?php
 session_start();
 if($_POST) {
-		include("../config/db/connect/db_connect.php");
+		include("../config/db/connect/DBConnect.php");
 
 			$query = "SELECT * FROM book";
 			$result = mysqli_query($connection, $query);

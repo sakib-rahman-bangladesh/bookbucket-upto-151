@@ -1,5 +1,5 @@
 <?php
-  include_once("../config/db/connect/db_connect.php");
+  include_once("../config/db/connect/DBConnect.php");
   // DEBUG
   if(isset($_POST['Submit'])) {
 
@@ -8,18 +8,18 @@
 
     $description = mysqli_real_escape_string($connection, $_POST['description']);
     $purpose = mysqli_real_escape_string($connection, $_POST['purpose']);
-    // $quantity = mysqli_real_escape_string($connection, $_POST['quantity']);
-    // $cell_number = mysqli_real_escape_string($connection, $_POST['cell_number']);
+    $price = mysqli_real_escape_string($connection, $_POST['price']);
+    $location = mysqli_real_escape_string($connection, $_POST['location']);
 
     // DEBUG:
-    echo "purpose: $purpose".'<br>';
+    // echo "purpose: $purpose".'<br>';
     //echo "$author".'<br>';
     //echo "$quantity".'<br>';
     //echo "$cell_number".'<br>';
 
     $postTime = date('Y-m-d H:i:s');
     //insert data to database
-    $query = "INSERT INTO `post` (`description`, `purpose`, `postTime`) VALUES ( '$description', '$purpose', '$postTime')";
+    $query = "INSERT INTO `post` (`description`, `purpose`, `price`, `location`, `postTime`) VALUES ( '$description', '$purpose', '$price', '$location', '$postTime')";
     //$query2 = "INSERT INTO order(book_name, author, quantity, cell_number) VALUES ('$book_name','$author','$quantity', '$cell_number')";
     $update = mysqli_query($connection, $query);
 

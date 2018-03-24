@@ -20,7 +20,7 @@
 
 <?php
 if($_POST) {
-		  include("../config/db/connect/db_connect.php");
+		  include("../config/db/connect/DBConnect.php");
 
 			$query = "SELECT * FROM user";
 			$result = mysqli_query($connection, $query);

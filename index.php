@@ -2,8 +2,8 @@
 <html>
   <head>
     <title>bookbucket</title>
-    <link rel="stylesheet" type="text/css" href="front-end\css\index.css">
-    <script src="front-end\js\libs.js"></script>
+    <link rel="stylesheet" type="text/css" href="css\index.css">
+    <script src="js\libs.js"></script>
   </head>
 
   <body>
@@ -14,7 +14,7 @@
     <div style="text-align:center;">
       <div style="border: 2px solid #a1a1a1; border-radius: 20px; display: inline-block;border: 1px solid #989fa5; text-align:center;background:#e8eef4;">
         <h3 style="text-align:center;color:#465360">Ordering Book Details</h3>
-				<form action="controllers/order.php" method="post" name="order_book">
+				<form action="controllers/Order.php" method="post" name="order_book">
 					<table>
 	          <tr>
 	            <td style="color:#465360"><b>Book</b></td>
@@ -26,7 +26,7 @@
 	          </tr>
 	          <tr>
 	            <td style="color:#465360"><b>Quantity</b></td>
-	            <td><input id="quantity" name="quantity" type="text"><br><span id="quantity_required" style="color:red;"></span></td>
+	            <td><input id="quantity" name="quantity" type="number"><br><span id="quantity_required" style="color:red;"></span></td>
 	          </tr>
 	          <tr>
 	            <td style="color:#465360"><b>Cell Number</b></td>

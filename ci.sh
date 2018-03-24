@@ -62,8 +62,9 @@ echo
 ## Solved issues
 ## Default: Commit skipped|forgotten
 ## 🔴 TODO: Good update but fix errors
+## 💚 localhost: cr2018.Mar24.1.5.0
 
-git commit -m "🔴TODO: Fix errors at radio"
+git commit -m "💚 localhost: cr2018.Mar24.1.5.0"
 
 ############
 # Step: 05 #

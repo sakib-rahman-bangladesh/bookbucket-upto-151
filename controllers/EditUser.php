@@ -3,7 +3,7 @@
 	$email = $_GET['email'];
 
 	// including the database connection file
-	include("../config/db/connect/db_connect.php");
+	include("../config/db/connect/DBConnect.php");
 
 	// selecting data associated with this particular email
 	$query = "SELECT * FROM `user` WHERE email='$email'";
@@ -82,7 +82,7 @@
 <html>
 	<head>
 		<title>Update user</title>
-		<link rel="stylesheet" type="text/css" href="..\front-end\css\registration.css">
+		<link rel="stylesheet" type="text/css" href="..\css\registration.css">
 	</head>
 
 	<body>

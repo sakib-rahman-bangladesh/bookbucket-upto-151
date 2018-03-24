@@ -35,7 +35,7 @@
 <?php
 session_start();
 if($_POST){
-		include("../config/db/connect/db_connect.php");
+		include("../config/db/connect/DBConnect.php");
 		if ($connection)
 		{
 			$email = mysqli_real_escape_string($connection, $_POST['email']);
@@ -51,7 +51,7 @@ if($_POST){
 					$_SESSION['email'] = $email;
 					$_SESSION['password'] = $password;
 
-          header("Location: userProfile.php");
+          header("Location: UserProfile.php");
 				} else {
 					echo"Error Login! Incorrect email or password.";
 				}

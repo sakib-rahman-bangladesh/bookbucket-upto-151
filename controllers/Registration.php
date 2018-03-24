@@ -29,7 +29,7 @@ if ($_POST) {
 		$errors['contact_no'] = "Enter your contact no please";
 
 	if(count($errors) == 0){
-		include("../config/db/connect/db_connect.php");
+		include("../config/db/connect/DBConnect.php");
 		if ($connection){
 			echo"connection established";
 
@@ -46,7 +46,7 @@ if ($_POST) {
 			$update = mysqli_query($connection, $query);
 
 			if($update) {echo"$name's registration successful.";
-			header("Location:congratulation.php");}
+			header("Location:Congratulation.php");}
 		}
 	}
  }
@@ -56,7 +56,7 @@ if ($_POST) {
 <html>
 	<head>
 		<title>Registration</title>
-		<link rel="stylesheet" type="text/css" href="..\front-end\css\registration.css">
+		<link rel="stylesheet" type="text/css" href="..\css\registration.css">
 	</head>
 
 	<body>

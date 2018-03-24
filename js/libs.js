@@ -52,6 +52,9 @@ function submitOrder() {
     }
 }
 
+// NO Need js validation for post
+// AS, done through HTML
+/*
 function post() {
   console.log("Watching...");
   console.log("function: post()");
@@ -75,3 +78,4 @@ function post() {
     console.log("- description: " + description);
   }
 }
+*/
