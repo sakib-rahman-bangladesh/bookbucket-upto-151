@@ -28,7 +28,7 @@
 	</div>
 	<?php
 	if($_POST){
-		header("Location:login.php");
+		header("Location:Login.php");
 	}
 	?>
 </body>

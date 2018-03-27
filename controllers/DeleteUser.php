@@ -3,7 +3,7 @@
   $email = $_GET['email'];
 
   //including the database connection file
-  include("../config/db/connect/DBConnect.php");
+  include("../config/db/DBConnect.php");
 
   // delete query
   $query = "DELETE FROM `user` WHERE `user`.`email` = '$email'";

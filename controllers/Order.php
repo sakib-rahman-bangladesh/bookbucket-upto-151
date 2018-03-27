@@ -1,5 +1,5 @@
 <?php
-  include_once("../config/db/connect/DBConnect.php");
+  include_once("../config/db/DBConnect.php");
 
   if(isset($_POST['Submit'])) {
 

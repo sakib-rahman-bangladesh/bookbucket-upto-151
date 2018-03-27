@@ -171,7 +171,7 @@
         </div>
 			</div>
       <div class="navigation header">
-				<span>Home</span> | <span><a class="white" href="http://localhost/bookbucket">Logout</a></span>
+				<span>Home</span> | <span><a class="white" href="../index.php">Logout</a></span>
 			</div>
       <div class="leftside_menu green">
 				<p>News Feed</p>
@@ -192,24 +192,29 @@
   					<input type="submit" name="Sell" value="Sell">
   				 </div>
           </form>
-        <form action="Post.php" method="post">
-          <div class="post">
-            <p style="width:100px;font-weight:bold;">Make post</p>
-            <textarea id="description" name="description" type="text" rows="4" cols="60" placeholder="Describe your book..." autofocus required></textarea><span id="description_required" style="color:red;"></span>
-            <div style="position: relative;">
-              <div style="width:90px; background-color: #e9ebee; border-radius: 25px; padding: 10px; font-weight:bold;font-size:14px;">Upload image</div>
-              <div style="position: absolute; left: 130px;top:8px;">
-                <input required type="radio" name="purpose" value="rent"> Rent
-                <input required type="radio" name="purpose" value="sell"> Sell
-                <!-- number   supported by HTML5: https://www.w3schools.com/html/html_form_input_types.asp-->
-                <input required type="number" name="price" placeholder="price" style="width: 50px; margin-left: 30px;">
-                <input required type="text" name="location" placeholder="location" style="width: 60px; margin-left: 5px;">
+          <form action="Post.php" method="post" enctype="multipart/form-data">
+            <div class="post">
+              <p style="width:100px;font-weight:bold;">Make post</p>
+              <textarea id="description" name="description" type="text" rows="4" cols="60" placeholder="Describe your book..." autofocus required></textarea><span id="description_required" style="color:red;"></span>
+              <div style="position: relative;">
+                <!-- TODO: make userfriendly: upload image
+                <div style="width:90px; background-color: #e9ebee; border-radius: 25px; padding: 10px; font-weight:bold;font-size:14px;">Upload image</div>
+                -->
+                <div style="position: relative; left: 0px; top:8px;">
+                  <input required type="radio" name="purpose" value="rent"> Rent
+                  <input required type="radio" name="purpose" value="sell"> Sell
+                  <!-- number   supported by HTML5: https://www.w3schools.com/html/html_form_input_types.asp-->
+                  <input required type="number" name="price" placeholder="price" style="width: 50px; margin-left: 30px;">
+                  <input required type="text" name="location" placeholder="location" style="width: 60px; margin-left: 5px;">
+
+                  <input type="file" name="image" required style="margin-left: 20px;">
+                </div>
+
+                <button type="submit" name="Submit" style="position: absolute; bottom: 8px; right:16px; font-size: 14px; color:blue; padding: 5px;"><span>POST</span></button>
               </div>
-              <button type="submit" name="Submit" style="position: absolute; bottom: 8px; right:16px; font-size: 14px; color:blue; padding: 5px;"><span>POST</span></button>
             </div>
-          </div>
-        </form>
-				<br>
+          </form>
+  				<br>
 
       <?php
         if(isset($_GET['Rent'])) {
@@ -221,7 +226,7 @@
 
         function sellFunc(){
           // DEBUG: echo "sellFunc()";
-          include("../config/db/connect/DBConnect.php");
+          include("../config/db/DBConnect.php");
 
           $query = "SELECT * FROM post where purpose='sell' order by postTime desc";
           $result = mysqli_query($connection, $query);
@@ -241,7 +246,7 @@
 
         function rentFunc(){
             // DEBUG: echo "rentFunc()";
-            include("../config/db/connect/DBConnect.php");
+            include("../config/db/DBConnect.php");
 
             $query = "SELECT * FROM post where purpose='rent' order by postTime desc";
             $result = mysqli_query($connection, $query);
@@ -277,15 +282,18 @@
             // echo "$time_elapsed" . "<br><br>";
 
             echo '<div>';
-                echo '<div class="post">';
+              echo '<div class="post">';
                 echo '<p>Purpose: '. '<span class="bold uppercase">' . "{$row['purpose']}" . '</span>, Price: <span class="bold">' . "{$row['price']}" . ' tk<p>';
                 echo '<p class="time_location"><span>' . timeAgo($row['postTime']) . '<span>, <span class="uppercase">' . "{$row['location']}" . '</span><p>';
                 echo '<br>';
                 echo "{$row['description']}";
-                  echo '<div class="post_img"></div>';
-                  echo '<hr>';
-                  echo '<p style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:40px;font-weight:bold;">CALL</p>';
-                echo '</div>';
+                echo "<div class='post_img'>";
+                    echo "<img src='images/".$row['image']."' alt='Book image' width='290' height='190'>";
+                echo "</div>";
+                echo "<br>";
+                echo '<hr>';
+                echo '<p style="background-color: #e9ebee; border-radius: 25px; padding: 10px; width:40px;font-weight:bold;">CALL</p>';
+              echo '</div>';
             echo '</div><br>';
           }
           function noPostFound () {

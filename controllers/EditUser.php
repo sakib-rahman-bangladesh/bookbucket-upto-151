@@ -3,7 +3,7 @@
 	$email = $_GET['email'];
 
 	// including the database connection file
-	include("../config/db/connect/DBConnect.php");
+	include("../config/db/DBConnect.php");
 
 	// selecting data associated with this particular email
 	$query = "SELECT * FROM `user` WHERE email='$email'";
@@ -69,7 +69,7 @@
 			  }
 				if(!empty($update)) {
 					echo"$name's registration successful.";
-					header("Location:getUser.php");
+					header("Location:GetUser.php");
 				} else {
 					echo "Update failure!";
 				}

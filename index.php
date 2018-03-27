@@ -1,3 +1,18 @@
+<?php
+  // Show Errors
+  error_reporting(E_ALL);
+  ini_set('display_errors','On');
+  // Redirect
+  if (isset($_POST['login'])){
+  	header("Location:controllers/Login.php");
+    die();
+  }
+  if(isset($_POST['register'])){
+  	header("Location:controllers/Registration.php");
+    die();
+  }
+?>
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -48,16 +63,6 @@
           	<input type = "submit" name = "register" value = "Register" style="border: 2px solid #a1a1a1; border-radius: 20px;">
           	<input type = "submit" name = "login" value = "Login" style="border: 2px solid #a1a1a1; border-radius: 20px;">
         </form>
-        <?php
-        	if (isset($_POST['login'])){
-        		header("Location:controllers/Login.php");
-        	}
-        	if(isset($_POST['register'])){
-        		header("Location:controllers/Registration.php");
-        	}
-        ?>
-
     </div>
-
   </body>
 </html>

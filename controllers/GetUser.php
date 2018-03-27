@@ -10,7 +10,7 @@
       <form action="" method="post" name="" style="padding: 10px;">
         <button type="submit" name="submit" style="border: 2px solid #a1a1a1; border-radius: 20px;background: #dddddd;"><b>View User</b></button>
       </form>
-			<a href="http://localhost/bookbucket/">Home</a>
+			<a href="../index.php">Home</a>
     </div>
 </body>
 </html>
@@ -20,7 +20,7 @@
 
 <?php
 if($_POST) {
-		  include("../config/db/connect/DBConnect.php");
+		  include("../config/db/DBConnect.php");
 
 			$query = "SELECT * FROM user";
 			$result = mysqli_query($connection, $query);

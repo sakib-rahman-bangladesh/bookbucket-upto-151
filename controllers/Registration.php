@@ -29,7 +29,7 @@ if ($_POST) {
 		$errors['contact_no'] = "Enter your contact no please";
 
 	if(count($errors) == 0){
-		include("../config/db/connect/DBConnect.php");
+		include("../config/db/DBConnect.php");
 		if ($connection){
 			echo"connection established";
 

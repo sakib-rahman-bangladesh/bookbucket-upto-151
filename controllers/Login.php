@@ -1,3 +1,31 @@
+<?php
+session_start();
+if($_POST){
+		include("../config/db/DBConnect.php");
+		if ($connection)
+		{
+			$email = mysqli_real_escape_string($connection, $_POST['email']);
+			$password = mysqli_real_escape_string($connection, $_POST['password']);
+			//echo $password;
+			$query = "SELECT email, password
+                FROM user
+                WHERE email = '$email' AND password = '$password'";
+			$result = mysqli_query($connection, $query);
+			$num_rows = mysqli_num_rows($result);
+				if($num_rows)
+				{
+					$_SESSION['email'] = $email;
+					$_SESSION['password'] = $password;
+
+          header("Location: UserProfile.php");
+				} else {
+					echo"Error Login! Incorrect email or password.";
+				}
+		}
+	}
+?>
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,30 +59,3 @@
       </div>
 </body>
 </html>
-
-<?php
-session_start();
-if($_POST){
-		include("../config/db/connect/DBConnect.php");
-		if ($connection)
-		{
-			$email = mysqli_real_escape_string($connection, $_POST['email']);
-			$password = mysqli_real_escape_string($connection, $_POST['password']);
-			//echo $password;
-			$query = "SELECT email, password
-                FROM user
-                WHERE email = '$email' AND password = '$password'";
-			$result = mysqli_query($connection, $query);
-			$num_rows = mysqli_num_rows($result);
-				if($num_rows)
-				{
-					$_SESSION['email'] = $email;
-					$_SESSION['password'] = $password;
-
-          header("Location: UserProfile.php");
-				} else {
-					echo"Error Login! Incorrect email or password.";
-				}
-		}
-	}
-?>

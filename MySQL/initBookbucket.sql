@@ -97,6 +97,9 @@ ADD COLUMN location VARCHAR(10);
 ALTER TABLE post
   ADD COLUMN postTime datetime;
 
+ALTER TABLE post
+  ADD COLUMN image VARCHAR(200);
+
   -- INSERT: False data
   INSERT INTO `post` (`postID`, `description`, `purpose`, `price`, `location`, `postTime`) VALUES
   (2, 'Operating system concepts by peter. New copy price 300 tk and see rent price for 2 months.', 'rent', '50', 'Dhanmondi', '2018-03-24 09:03:39'),
