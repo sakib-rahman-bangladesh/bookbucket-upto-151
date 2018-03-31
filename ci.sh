@@ -64,7 +64,7 @@ echo
 ## 🔴 TODO: Good update but fix errors
 ## 💚 localhost: cr2018.Mar24.1.5.0
 
-git commit -m "💚 localhost: cr2018.Mar28.1.6.0"
+git commit -m "🔴 issue v1.5.2"
 
 ############
 # Step: 05 #
